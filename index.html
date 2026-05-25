@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Empresa Biobio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <header>
     <h1>Registro colaboradores</h1>
@@ -13,29 +14,46 @@
 </header>
 <body>
     <main>
-        <section id="formulario">//nombre, apellido, cargo y correo electronico corporativo
-            <form id="form-corportativo" method="post"></form>
-            <label id="nombre">Nombre:</label>
+        <section id="formulario">
+        <form id="form-corporativo" method="post">
+            <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" required placeholder="">
 
-            <label id="apellido">Apellido:</label>
+            <label for="apellido">Apellido:</label>
             <input type="text" id="apellido" name="apellido" required placeholder="">
 
-            <label id="cargo">Cargo:</label>
+            <label for="cargo">Cargo:</label>
             <select id="cargo" name="cargo">
-            <option value="gerente">Gerente</option>
-            <option value="secretaria">Secretaria</option>
-            <option value="administrador">Administrador</option>
-            <option value="trabajador">Trabajador</option>
+                <option value="gerente">Gerente</option>
+                <option value="secretaria">Secretaria</option>
+                <option value="administrador">Administrador</option>
+                <option value="trabajador">Trabajador</option>
             </select>
 
-            <label id="correo-corporativo">Correo:</label>
+            <label for="correo-corporativo">Correo:</label>
             <input type="text" id="correo-corporativo" name="correo-corporativo" required placeholder="@empresa.cl">
 
             <button type="submit">Registrar</button>
             <p id="form-error"></p>
+            
+        </form>
         </section>
+
+        <section id="empleados-registrados">
+
+        </section>
+
+        <section id="filtros">
+            <label for="filtros">Filtro de empleado:</label>
+            <input type="text" id="buscador" placeholder="Ingresa nombre o cargo del empleado">
+            <button type="submit">Buscar</button>  
+        </section>
+
     </main>
+    <footer>
+
+    </footer>
+    <script src="script.js"></script>
     
 </body>
 </html>
