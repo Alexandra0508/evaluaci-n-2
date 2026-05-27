@@ -67,7 +67,7 @@ buscador.addEventListener('input', filtrarColaboradores);
 
 function eliminarColaborador(id) {
     colaboradores = colaboradores.filter(colaborador => colaborador.id !== id);
-    filtrarColaboradores(); // Recarga la tabla respetando si hay búsquedas activas
+    filtrarColaboradores(); 
 }
 
 function renderizarTabla(listaAMostrar) {
@@ -108,7 +108,7 @@ formulario.addEventListener('submit', function(event) {
             id: Date.now(), 
             nombre: nombre.trim(),
             apellido: apellido.trim(),
-            cargo: cargo.charAt(0).toUpperCase() + cargo.slice(1), // Capitaliza la primera letra (ej: 'gerente' -> 'Gerente')
+            cargo: cargo.charAt(0).toUpperCase() + cargo.slice(1), 
             correo: correo.trim().toLowerCase()
         };
         colaboradores.push(nuevoColaborador);
