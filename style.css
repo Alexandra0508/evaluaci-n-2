@@ -1,0 +1,227 @@
+
+:root {
+    --primary-color: #2c3e50;    
+    --secondary-color: #3498db;  
+    --success-color: #27ae60;    
+    --danger-color: #e74c3c;     
+    --bg-body: #f4f7f6;          
+    --bg-card: #ffffff;          
+    --text-main: #333333;        
+    --text-muted: #7f8c8d;       
+    --border-color: #e2e8f0;    
+    --radius: 8px;               
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 10px 0;
+}
+
+header h1 {
+    color: var(--primary-color);
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px; 
+}
+
+section {
+    background-color: var(--bg-card);
+    padding: 25px;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+
+#formulario form {
+    display: flex;
+    flex-direction: column;
+}
+
+#formulario label {
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: var(--primary-color);
+}
+
+#formulario input[type="text"],
+#formulario select {
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccd1d1;
+    border-radius: 4px;
+    font-size: 15px;
+    background-color: #fcfcfc;
+    transition: all 0.3s ease;
+}
+
+
+#formulario input:focus, 
+#formulario select:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+    background-color: #fff;
+}
+
+
+#formulario button[type="submit"] {
+    background-color: var(--success-color);
+    color: #ffffff;
+    border: none;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#formulario button[type="submit"]:hover {
+    background-color: #219150;
+}
+
+
+#form-error {
+    margin-top: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    min-height: 20px;
+}
+
+
+#filtros {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap; 
+}
+
+#filtros label {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+#filtros input[type="text"] {
+    flex-grow: 1; 
+    padding: 10px 15px;
+    border: 1px solid #ccd1d1;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+#filtros input[type="text"]:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+}
+
+#filtros button {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#filtros button:hover {
+    background-color: #2980b9;
+}
+
+
+#colaboradores-registrados {
+    background-color: var(--bg-card);
+    padding: 25px;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    width: 100%; 
+}
+
+
+.tabla-colaboradores {
+    width: 100%;
+    overflow-x: auto; 
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    margin-top: 15px;
+}
+
+
+table {
+    width: 100% ;   
+    border-collapse: collapse;
+    table-layout: fixed;       
+    min-width: 600px;          
+}
+
+th, td {
+    padding: 16px 12px;
+    text-align: left;
+    font-size: 15px;
+    word-wrap: break-word;    
+}
+
+th {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    font-weight: 600;
+}
+
+table th:nth-child(1), table td:nth-child(1) { width: 18%; } /* Nombre */
+table th:nth-child(2), table td:nth-child(2) { width: 18%; } /* Apellido */
+table th:nth-child(3), table td:nth-child(3) { width: 18%; } /* Cargo */
+table th:nth-child(4), table td:nth-child(4) { width: 31%; } /* Correo */
+table th:nth-child(5), table td:nth-child(5) { width: 15%; } /* Acciones */
+
+
+th:last-child, 
+td:last-child {
+    text-align: center;
+}
+
+tr {
+    border-bottom: 1px solid var(--border-color);
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+
+footer {
+    margin-top: 40px;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+}
+
+.footer-content p {
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
